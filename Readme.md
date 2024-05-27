@@ -16,7 +16,7 @@ _`.editorconfig`, `.gitattributes`, `.gitignore`._
 
 Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
 
-#### 2. Создайте форк
+#### 2.  Создайте форк
 
 Откройте репозиторий и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
 
@@ -33,7 +33,10 @@ _`.editorconfig`, `.gitattributes`, `.gitignore`._
 <img width="769" alt="SSH" src="https://cloud.githubusercontent.com/assets/259739/20264180/42704126-aa7b-11e6-9ab4-73372b812a53.png">
 
 Клонировать репозиторий можно так:
+ 
+ 
 
+ 
 ```
 git clone SSH-адрес_вашего_форка
 ```
