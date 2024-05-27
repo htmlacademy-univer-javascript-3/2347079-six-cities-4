@@ -31,11 +31,11 @@ function Favorites({favoriteOffers}:FavoriteOffer): JSX.Element {
             <nav className ="header__nav">
               <ul className ="header__nav-list">
                 <li className ="header__nav-item user">
-                  <a className ="header__nav-link header__nav-link--profile" href="#">
+                  <a className ="header__nav-link header__nav-link--profile">
                     <div className ="header__avatar-wrapper user__avatar-wrapper">
                     </div>
                     <span className ="header__user-name user__name">Oliver.conner@gmail.com</span>
-                    <span className ="header__favorite-count">3</span>
+                    <span className ="header__favorite-count">{favoriteOffers.length}</span>
                   </a>
                 </li>
                 <li className ="header__nav-item">
@@ -48,12 +48,12 @@ function Favorites({favoriteOffers}:FavoriteOffer): JSX.Element {
           </div>
         </div>
       </header>
-
       <main className ="page__main page__main--favorites">
         <div className ="page__favorites-container container">
           <section className ="favorites">
             <h1 className ="favorites__title">Saved listing</h1>
             <ul className ="favorites__list">
+
               {Object.keys(favouriteOffersMap).map((city) => (
                 <li className="favorites__locations-items" key={city}>
                   <div className="favorites__locations locations locations--current">
@@ -65,7 +65,7 @@ function Favorites({favoriteOffers}:FavoriteOffer): JSX.Element {
                   </div>
                   <div className="favorites__places">
                     {favouriteOffersMap[city].map((offer) => (
-                      <PlaceCard key={offer.id} offer={offer}></PlaceCard>
+                      <PlaceCard key={offer.id} offer={offer} typeOfCard = {'defoult'}></PlaceCard>
                     ))}
                   </div>
                 </li>
