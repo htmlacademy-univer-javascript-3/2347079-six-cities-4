@@ -1,27 +1,25 @@
-//здесь подключаем все наше приложение на страницу
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {Provider} from 'react-redux';
-import App from './components/app/app';
-import ErrorMessage from './components/error-message/error-message';
-
-import {store} from './store/index';
-import { checkAuthAction, fetchOffersAction } from './store/api-actions';
-
-store.dispatch(fetchOffersAction());
-store.dispatch(checkAuthAction());
+import App from './app';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import { fetchOffersAction } from './store';
+import { checkAuthAction } from './store';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
+store.dispatch(fetchOffersAction());
+store.dispatch(checkAuthAction());
+
 root.render(
   <React.StrictMode>
-    <Provider store = {store}>
-      <ErrorMessage />
-      <App/>
+    <Provider store={store}>
+      <App />
+      <ToastContainer />
     </Provider>
-
-  </React.StrictMode>,
+  </React.StrictMode>
 );
-
