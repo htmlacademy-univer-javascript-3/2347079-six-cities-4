@@ -1,8 +1,4 @@
-export type User = {
-  name: string;
-  avatar: string;
-  isPro: boolean;
-}
+import { User } from './user';
 
 export type Review = {
   id: string;
@@ -10,6 +6,4 @@ export type Review = {
   user: User;
   comment: string;
   rating: number;
-}
-
-export type Reviews = Review[];
+  }
